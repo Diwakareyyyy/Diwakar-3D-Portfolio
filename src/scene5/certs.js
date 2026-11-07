@@ -1,0 +1,82 @@
+// Scene five canvas WebGL renderer: the cyan/ice-blue atmospheric environment.
+
+import { program, unitQuad, texture, upload, bind, loadImage } from '../gl/renderer.js';
+import { V5, F5_ROOM } from '../gl/shaders5.js';
+import { fitCover, FRAME } from './layout5.js';
+
+export class CertsStage {
+  constructor(canvas, gl) {
+    this.canvas = canvas;
+    this.gl = gl;
+    this.progs = {
+      room: program(gl, V5, F5_ROOM, 'room5'),
+    };
+    this.quad = unitQuad(gl);
+    this.tex = {
+      plate: texture(gl),
+      grain: texture(gl, { wrap: 'repeat' }),
+    };
+    this.par = { x: 0, y: 0 };
+    this.dolly = 0;
+  }
+
+  async load() {
+    const [plate, grain] = await Promise.all([
+      loadImage('public/certs/plate.jpg'),
+      loadImage('public/tex/grain.png'),
+    ]);
+    upload(this.gl, this.tex.plate, plate);
+    upload(this.gl, this.tex.grain, grain);
+  }
+
+  resize(w, h, dpr) {
+    const W = Math.round(w * dpr);
+    const H = Math.round(h * dpr);
+    if (this.canvas.width !== W || this.canvas.height !== H) {
+      this.canvas.width = W;
+      this.canvas.height = H;
+    }
+    this.res = [W, H];
+    this.cssW = w;
+    this.cssH = h;
+    this.fit = fitCover(w, h);
+    this.gl.viewport(0, 0, W, H);
+    return this.fit;
+  }
+
+  render(t, s) {
+    const gl = this.gl;
+    const [W, H] = this.res;
+    const f = this.fit;
+
+    const sx = this.cssW / (FRAME[0] * f.s);
+    const sy = this.cssH / (FRAME[1] * f.s);
+    const ox = -f.ox / (FRAME[0] * f.s);
+    const oy = -f.oy / (FRAME[1] * f.s);
+
+    gl.disable(gl.DEPTH_TEST);
+    gl.enable(gl.BLEND);
+    gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+    gl.clearColor(0, 0, 0, 1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.bindVertexArray(this.quad);
+
+    {
+      const pr = this.progs.room;
+      gl.useProgram(pr.p);
+      gl.uniform1i(pr.u.uPlate, bind(gl, this.tex.plate, 0));
+      gl.uniform1i(pr.u.uGrain, bind(gl, this.tex.grain, 1));
+      gl.uniform4f(pr.u.uCover, sx, sy, ox, oy);
+      gl.uniform1f(pr.u.uTime, t);
+      gl.uniform1f(pr.u.uAspect, W / H);
+      gl.uniform1f(pr.u.uWake, s.wake);
+      gl.uniform1f(pr.u.uGlow, s.glow);
+      gl.uniform1f(pr.u.uFloorL, s.floor);
+      gl.uniform2f(pr.u.uPar, this.par.x, this.par.y);
+      gl.uniform1f(pr.u.uDolly, this.dolly);
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    }
+
+    gl.bindVertexArray(null);
+  }
+}

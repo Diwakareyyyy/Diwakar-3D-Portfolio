@@ -1,0 +1,15 @@
+# Development & temporary output
+shots/
+__pycache__/
+*.pyc
+
+# Backups (kept locally on your machine, not uploaded to GitHub)
+_backup_assets/
+_backup_diwakar_clean/
+*.bak
+
+# Editor & OS settings
+.vscode/
+.claude/
+.DS_Store
+Thumbs.db

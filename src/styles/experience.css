@@ -1,0 +1,1233 @@
+/* ==========================================================================
+   Experience Section — Horizontal Sliding System (Exact Two-Halves Edition)
+   Composition:
+     - Slide 1:
+         - LEFT HALF:
+             - Experience Image Content Box (Above the developer)
+             - Grounded Developer (Diwakar) character at bottom-left facing right
+         - RIGHT HALF:
+             - Full-size Architectural Building Sketch extending top to bottom
+             - Signboard: Infology Technologies
+             - Small professional Next arrow control
+     - Slide 2:
+         - Full-screen "UPDATING SOON" continuation screen
+         - Subtitle: "More professional experiences are on the way."
+         - Small professional Previous arrow control
+   ========================================================================== */
+
+.experience {
+  position: relative;
+  height: 100svh;
+  background: #050405;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid rgba(222, 27, 28, 0.18);
+  border-bottom: 1px solid rgba(222, 27, 28, 0.18);
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Atmospheric Environment & Floor Horizon
+   -------------------------------------------------------------------------- */
+.exp__env {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.exp__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.exp__env-glow {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -38%);
+  width: min(1300px, 95vw);
+  height: 560px;
+  background: radial-gradient(ellipse at center, rgba(222, 27, 28, 0.16) 0%, rgba(255, 80, 40, 0.05) 45%, transparent 75%);
+}
+
+.exp__env-floor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 44%;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 8, 10, 0.96) 100%);
+  perspective: 900px;
+}
+
+.exp__floor-grid {
+  position: absolute;
+  inset: -60% -20% 0 -20%;
+  background-image:
+    linear-gradient(rgba(222, 27, 28, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(222, 27, 28, 0.05) 1px, transparent 1px);
+  background-size: 42px 42px;
+  transform: rotateX(68deg);
+  transform-origin: 50% 100%;
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.85) 60%, rgba(0,0,0,1) 100%);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.85) 60%, rgba(0,0,0,1) 100%);
+}
+
+.exp__floor-horizon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(222, 27, 28, 0.32) 30%, rgba(255, 120, 40, 0.38) 70%, transparent 100%);
+}
+
+/* Film grain overlay */
+.experience::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../../public/tex/grain.png') repeat;
+  background-size: 320px;
+  opacity: 0.040;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Full-Screen Sliding Viewport & Horizontal Track
+   -------------------------------------------------------------------------- */
+.exp__viewport {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
+  overflow: hidden;
+  display: flex;
+}
+
+.exp__fulltrack {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.exp__fulltrack:has(.exp__slide:nth-child(2)) {
+  width: 200%;
+}
+
+.exp__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--hdr-h, 62px) + 4px) clamp(20px, 3.5vw, 60px) clamp(12px, 2vh, 22px);
+  box-sizing: border-box;
+}
+
+.exp__fulltrack:has(.exp__slide:nth-child(2)) .exp__slide {
+  flex: 0 0 50%;
+  width: 50%;
+}
+
+/* Hide navigation controls if there is only one slide */
+.exp__fulltrack:not(:has(.exp__slide:nth-child(2))) .exp__nav-btn {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Slide 1: Wrap & Header
+   -------------------------------------------------------------------------- */
+.exp__wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+  height: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.exp__header {
+  text-align: center;
+  margin-bottom: clamp(6px, 1.2vh, 12px);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 1s cubic-bezier(.16, 1, .3, 1),
+              transform 1s cubic-bezier(.16, 1, .3, 1);
+}
+.experience.is-visible .exp__header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.exp__over {
+  margin: 0 0 0.3em;
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(7.5px, 0.65vw, 9.5px);
+  font-weight: 500;
+  letter-spacing: 0.52em;
+  text-indent: 0.52em;
+  text-transform: uppercase;
+  color: #ff5533;
+}
+
+.exp__title {
+  margin: 0;
+  font-family: 'Bodoni Moda', 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: clamp(22px, 2.4vw, 36px);
+  line-height: 1.15;
+  letter-spacing: 0.22em;
+  text-indent: 0.22em;
+  text-transform: uppercase;
+  color: #f6ede3;
+  text-shadow: 0 0 20px rgba(222, 27, 28, 0.35);
+}
+
+.exp__sub {
+  margin: 0.3em 0 0;
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(8.5px, 0.7vw, 11.5px);
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: rgba(240, 225, 215, 0.68);
+}
+
+/* --------------------------------------------------------------------------
+   Slide 1 Main Stage: TWO-HALVES COMPOSITION
+   LEFT SIDE: Wide Landscape Glass Panel (Above Human) + Grounded Character
+   RIGHT SIDE: Full-Size Infologia Technologies Building Sketch
+   -------------------------------------------------------------------------- */
+.exp__stage {
+  position: relative;
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: 48% 52%;
+  align-items: stretch;
+  width: 100%;
+  min-height: 0;
+  gap: clamp(20px, 3vw, 48px);
+}
+
+.exp__left-col {
+  position: relative;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(18px, 3vh, 36px);
+  padding-top: clamp(24px, 3.6vh, 48px);
+}
+
+/* ---- ABOVE THE HUMAN: WIDE LANDSCAPE-ORIENTED 3D GLASS PANEL ---- */
+.exp__panel-zone {
+  position: relative;
+  z-index: 12;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 0 0 auto;
+}
+
+.exp__office-display {
+  position: relative;
+  width: min(620px, 100%);
+  margin: 0 auto;
+  z-index: 12;
+  opacity: 0;
+  transform: translate3d(0, -14px, 0);
+  pointer-events: auto;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.12s,
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.12s;
+}
+
+.experience.is-visible .exp__office-display {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.exp__display-glass {
+  position: relative;
+  padding: clamp(14px, 1.8vh, 22px) clamp(20px, 2.2vw, 30px);
+  background:
+    linear-gradient(135deg, rgba(22, 11, 15, 0.88) 0%, rgba(10, 6, 9, 0.94) 55%, rgba(18, 8, 12, 0.90) 100%);
+  border: 1px solid rgba(222, 27, 28, 0.48);
+  border-top: 1px solid rgba(255, 110, 75, 0.72);
+  border-bottom: 1px solid rgba(222, 27, 28, 0.34);
+  border-radius: 12px;
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.90),
+    0 0 32px rgba(222, 27, 28, 0.18),
+    0 0 1px rgba(255, 120, 80, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 18px rgba(222, 27, 28, 0.08);
+  text-align: left;
+  overflow: hidden;
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+/* Realistic specular glass reflection sheen */
+.exp__display-sheen {
+  position: absolute;
+  top: 0;
+  left: -35%;
+  width: 65%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.03) 35%,
+    rgba(255, 195, 175, 0.09) 50%,
+    rgba(255, 255, 255, 0.02) 65%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+  opacity: 0.75;
+}
+
+.exp__office-display:hover .exp__display-sheen,
+.exp__office-display.is-expanded .exp__display-sheen {
+  transform: skewX(-18deg) translateX(85%);
+  opacity: 1;
+}
+
+.exp__office-display:hover .exp__display-glass,
+.exp__office-display:focus-within .exp__display-glass {
+  border-color: rgba(255, 78, 52, 0.82);
+  border-top-color: rgba(255, 145, 100, 0.92);
+  box-shadow:
+    0 28px 68px rgba(0, 0, 0, 0.95),
+    0 0 44px rgba(222, 27, 28, 0.32),
+    0 0 16px rgba(255, 95, 50, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.20),
+    inset 0 0 26px rgba(222, 27, 28, 0.14);
+}
+
+.exp__office-display.is-expanded .exp__display-glass {
+  border-color: rgba(255, 85, 55, 0.88);
+  background:
+    linear-gradient(135deg, rgba(26, 12, 17, 0.94) 0%, rgba(12, 6, 10, 0.97) 60%, rgba(20, 9, 13, 0.95) 100%);
+  box-shadow:
+    0 34px 80px rgba(0, 0, 0, 0.96),
+    0 0 54px rgba(222, 27, 28, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+/* Top glowing accent bar */
+.exp__display-accent {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #de1b1c 25%, #ff6a3d 50%, #de1b1c 75%, transparent 100%);
+  box-shadow: 0 0 16px rgba(255, 90, 54, 0.9);
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.exp__office-display:hover .exp__display-accent,
+.exp__office-display.is-expanded .exp__display-accent {
+  width: 68%;
+}
+
+/* Precision corner brackets */
+.exp__display-corner {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-color: rgba(255, 95, 65, 0.65);
+  pointer-events: none;
+  transition: border-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+.exp__display-corner--tl { top: 7px; left: 7px; border-top: 1.5px solid; border-left: 1.5px solid; }
+.exp__display-corner--tr { top: 7px; right: 7px; border-top: 1.5px solid; border-right: 1.5px solid; }
+.exp__display-corner--bl { bottom: 7px; left: 7px; border-bottom: 1.5px solid; border-left: 1.5px solid; }
+.exp__display-corner--br { bottom: 7px; right: 7px; border-bottom: 1.5px solid; border-right: 1.5px solid; }
+
+.exp__office-display:hover .exp__display-corner {
+  border-color: rgba(255, 130, 85, 0.95);
+  width: 12px;
+  height: 12px;
+}
+
+/* Landscape Top Header Row inside Panel */
+.exp__display-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(222, 27, 28, 0.24);
+}
+
+.exp__display-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exp__display-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 2px;
+}
+
+.exp__status-pip {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff4532;
+  box-shadow: 0 0 8px #ff4532;
+}
+
+.exp__status-tag {
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(8.5px, 0.65vw, 10px);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #ff9478;
+}
+
+/* 1. Internship Role */
+.exp__display-role {
+  margin: 0;
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(19px, 1.75vw, 26px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 0 22px rgba(222, 27, 28, 0.38);
+}
+
+.exp__display-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+/* 2. Company Name */
+.exp__display-company {
+  margin: 0;
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(14px, 1.18vw, 18px);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ff5e3a;
+}
+
+.exp__meta-sep {
+  color: rgba(255, 110, 75, 0.55);
+  font-size: 12px;
+}
+
+/* 3. Internship Duration */
+.exp__display-date {
+  margin: 0;
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(11.5px, 0.92vw, 14px);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffd29d;
+}
+
+.exp__display-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Flutter and Dart Technology Labels */
+.exp__display-tech {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.exp__tech-pill {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 4px;
+  background: rgba(222, 27, 28, 0.18);
+  border: 1px solid rgba(255, 78, 52, 0.54);
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(10px, 0.78vw, 12px);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #fff2eb;
+  box-shadow: 0 0 12px rgba(222, 27, 28, 0.22);
+}
+
+/* Interactive Expand/Collapse Trigger Button */
+.exp__expand-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(222, 27, 28, 0.42);
+  color: #ffd8b2;
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(9px, 0.7vw, 10.5px);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.28s ease;
+}
+
+.exp__expand-btn:hover,
+.exp__expand-btn:focus-visible {
+  background: rgba(222, 27, 28, 0.24);
+  border-color: #ff5533;
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(222, 27, 28, 0.35);
+  outline: none;
+}
+
+.exp__expand-icon {
+  color: #ff5533;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.exp__office-display.is-expanded .exp__expand-icon {
+  transform: rotate(180deg);
+}
+
+/* Concise Primary Description Row */
+.exp__display-summary {
+  padding-top: 12px;
+}
+
+.exp__display-desc {
+  margin: 0;
+  font-family: var(--ui, 'Oswald', system-ui, sans-serif);
+  font-size: clamp(12.5px, 0.98vw, 15px);
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: 0.035em;
+  color: rgba(246, 238, 232, 0.93);
+}
+
+/* Embedded Expandable Details Drawer (Smooth CSS Grid Row Transition) */
+.exp__details-drawer {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 0.52s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease,
+    margin-top 0.52s cubic-bezier(0.22, 1, 0.36, 1);
+  margin-top: 0;
+}
+
+.exp__office-display.is-expanded .exp__details-drawer {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 14px;
+}
+
+.exp__details-inner {
+  overflow: hidden;
+  border-top: 1px solid rgba(222, 27, 28, 0.28);
+  padding-top: 14px;
+}
+
+.exp__details-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.exp__details-heading {
+  display: block;
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #ff6a46;
+  margin-bottom: 4px;
+}
+
+.exp__details-project {
+  margin: 0 0 8px;
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(13px, 1.05vw, 16px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff0e6;
+}
+
+.exp__details-list {
+  margin: 0;
+  padding-left: 16px;
+  display: grid;
+  gap: 5px;
+  font-family: var(--ui, 'Oswald', system-ui, sans-serif);
+  font-size: clamp(11.5px, 0.86vw, 13.5px);
+  font-weight: 400;
+  line-height: 1.48;
+  letter-spacing: 0.03em;
+  color: rgba(235, 224, 218, 0.88);
+}
+
+.exp__details-list li::marker {
+  color: #ff4532;
+}
+
+.exp__details-preview {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(222, 27, 28, 0.38);
+  background: #070406;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.8);
+  max-height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp__details-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 130px;
+  object-fit: cover;
+}
+
+.exp__details-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.exp__details-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.exp__details-tags span {
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(222, 27, 28, 0.30);
+  color: rgba(255, 218, 195, 0.85);
+}
+
+.exp__collapse-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: rgba(222, 27, 28, 0.16);
+  border: 1px solid rgba(255, 69, 50, 0.48);
+  color: #ffe8de;
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.exp__collapse-btn:hover {
+  background: #de1b1c;
+  color: #fff;
+}
+
+/* Grounded Developer Character Standing Naturally With Clear Headroom */
+.exp__char-col {
+  position: relative;
+  width: clamp(135px, 13.5vw, 185px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+  z-index: 6;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.25s,
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+  will-change: transform, opacity;
+}
+.experience.is-visible .exp__char-col {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.exp__char-shadow {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78%;
+  height: 18px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.5) 45%, transparent 75%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.exp__char-fig {
+  display: block;
+  width: 100%;
+  max-height: clamp(210px, 33svh, 315px);
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.95)) brightness(0.96) contrast(1.08);
+  will-change: transform, filter;
+}
+
+.exp__char-badge {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(14, 11, 14, 0.94);
+  border: 1.5px solid rgba(222, 27, 28, 0.65);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.9), 0 0 16px rgba(222, 27, 28, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+}
+.exp__badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff4532;
+  box-shadow: 0 0 10px #ff4532;
+}
+.exp__badge-text {
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(10px, 0.8vw, 12.5px);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(222, 27, 28, 0.4);
+}
+
+/* ---- RIGHT HALF: FULL-SIZE COMPANY BUILDING SKETCH (TOP TO BOTTOM) ---- */
+.exp__bld-zone {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  opacity: 0;
+  transform: translateY(-16px);
+  transition: opacity 1.2s cubic-bezier(.16, 1, .3, 1) 0.15s,
+              transform 1.2s cubic-bezier(.16, 1, .3, 1) 0.15s;
+}
+.experience.is-visible .exp__bld-zone {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.exp__bld-frame {
+  position: relative;
+  width: 100%;
+  height: 94%;
+  max-height: 86vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.exp__bld-grid-lines {
+  position: absolute;
+  inset: -8px;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(222, 27, 28, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(222, 27, 28, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1.4s ease 0.2s;
+}
+.experience.is-visible .exp__bld-grid-lines {
+  opacity: 1;
+}
+
+.exp__bld-sketch {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: clamp(320px, 52vh, 560px);
+  object-fit: contain;
+  object-position: right bottom;
+  filter: drop-shadow(0 20px 48px rgba(0, 0, 0, 0.98)) brightness(0.98) contrast(1.15);
+  user-select: none;
+  position: relative;
+  z-index: 2;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition: filter 1s ease;
+}
+
+.experience.is-visible .exp__bld-sketch {
+  animation: pencilDrawIn 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes pencilDrawIn {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    filter: drop-shadow(0 0 16px rgba(222, 27, 28, 0.8)) contrast(2.4) brightness(1.5) grayscale(0.5);
+    opacity: 0.2;
+  }
+  30% {
+    clip-path: polygon(0 0, 40% 0, 25% 100%, 0 100%);
+    filter: drop-shadow(0 0 20px rgba(222, 27, 28, 0.7)) contrast(2.0) brightness(1.3);
+    opacity: 0.75;
+  }
+  65% {
+    clip-path: polygon(0 0, 78% 0, 65% 100%, 0 100%);
+    filter: drop-shadow(0 0 20px rgba(222, 27, 28, 0.5)) contrast(1.5) brightness(1.15);
+    opacity: 0.92;
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    filter: drop-shadow(0 20px 48px rgba(0, 0, 0, 0.98)) brightness(0.98) contrast(1.15);
+    opacity: 1;
+  }
+}
+
+/* Animated pencil stylus drawing laser line */
+.exp__pencil-tracer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent 0%, #ff7528 25%, #de1b1c 70%, transparent 100%);
+  box-shadow: 0 0 10px #de1b1c, 0 0 20px rgba(255, 117, 40, 0.8);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 4;
+}
+
+.experience.is-visible .exp__pencil-tracer {
+  animation: pencilTraceAcross 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes pencilTraceAcross {
+  0% { left: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  85% { opacity: 0.85; }
+  100% { left: 100%; opacity: 0; }
+}
+
+/* Facade Signboard with exact legal name: Infology Technologies */
+.exp__signboard {
+  position: absolute;
+  top: 26%;
+  left: 26%;
+  z-index: 5;
+  padding: 6px 16px;
+  border-radius: 4px;
+  background: rgba(14, 11, 14, 0.95);
+  border: 1px solid rgba(222, 27, 28, 0.70);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.95),
+              0 0 20px rgba(222, 27, 28, 0.40);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: perspective(600px) rotateY(-8deg) rotateX(4deg);
+  transform-origin: left center;
+  white-space: nowrap;
+}
+
+.exp__signboard-pip {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff4532;
+  box-shadow: 0 0 8px #ff4532;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.exp__signboard-text {
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(10px, 0.84vw, 13.5px);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #fff6ee;
+  text-shadow: 0 0 10px rgba(255, 69, 50, 0.60);
+  vertical-align: middle;
+}
+
+/* Door entrance portal illumination target (positioned dynamically over the double glass doors) */
+.exp__bld-door-target {
+  position: absolute;
+  top: 64%;
+  left: 40%;
+  width: 44px;
+  height: 68px;
+  pointer-events: none;
+  z-index: 3;
+  border-radius: 3px;
+  background: radial-gradient(ellipse at 50% 60%, rgba(255, 130, 65, 0.26) 0%, rgba(222, 27, 28, 0.10) 55%, transparent 80%);
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.experience.is-walking .exp__bld-door-target,
+.experience.is-inside-office .exp__bld-door-target {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Small Professional Arrow Navigation Controls (Previous and Next only)
+   -------------------------------------------------------------------------- */
+.exp__nav-btn {
+  position: absolute;
+  bottom: clamp(16px, 2.5vh, 28px);
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(18, 10, 14, 0.88);
+  border: 1px solid rgba(222, 27, 28, 0.45);
+  border-radius: 24px;
+  padding: 8px 18px;
+  color: #f7e6e6;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.85), 0 0 18px rgba(222, 27, 28, 0.20);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  outline: none;
+}
+
+.exp__nav-btn--next {
+  right: clamp(20px, 3.2vw, 52px);
+}
+.exp__nav-btn--prev {
+  left: clamp(20px, 3.2vw, 52px);
+}
+
+.exp__nav-btn:hover,
+.exp__nav-btn:focus-visible {
+  background: rgba(36, 14, 18, 0.96);
+  border-color: #ff4532;
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.95), 0 0 24px rgba(255, 69, 50, 0.45);
+}
+
+.exp__nav-label {
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(9px, 0.72vw, 11px);
+  font-weight: 600;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: #ffd8b2;
+}
+
+.exp__nav-icon {
+  display: block;
+  color: #ff4532;
+  transition: transform 0.2s ease;
+}
+
+.exp__nav-btn--next:hover .exp__nav-icon {
+  transform: translateX(3px);
+}
+.exp__nav-btn--prev:hover .exp__nav-icon {
+  transform: translateX(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   Slide 2: Full-Screen "UPDATING SOON" Continuation Screen
+   -------------------------------------------------------------------------- */
+.exp__slide--future {
+  justify-content: center;
+  align-items: center;
+}
+
+.exp__future-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: clamp(20px, 4vh, 60px) var(--edge, 24px);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.exp__future-content {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exp__future-pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  background: rgba(222, 27, 28, 0.16);
+  border: 1px solid rgba(222, 27, 28, 0.45);
+  margin-bottom: clamp(14px, 2.5vh, 28px);
+}
+
+.exp__pulse-pip {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff4532;
+  box-shadow: 0 0 10px #ff4532;
+  animation: pulseBeacon 2s ease-in-out infinite alternate;
+}
+@keyframes pulseBeacon {
+  from { opacity: 0.5; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1.25); box-shadow: 0 0 16px #ff4532; }
+}
+
+.exp__pulse-text {
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(9px, 0.72vw, 11px);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #ff9d88;
+}
+
+.exp__future-title {
+  margin: 0 0 12px;
+  font-family: 'Bodoni Moda', 'Times New Roman', serif;
+  font-size: clamp(32px, 5.2vw, 72px);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-indent: 0.18em;
+  text-transform: uppercase;
+  color: #f6ede3;
+  text-shadow: 0 0 35px rgba(222, 27, 28, 0.55), 0 0 70px rgba(222, 27, 28, 0.25);
+}
+
+.exp__future-lead {
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(13px, 1.3vw, 19px);
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: #ff856e;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+.exp__future-desc {
+  font-family: var(--ui, 'Oswald', system-ui, sans-serif);
+  font-size: clamp(11.5px, 0.9vw, 14.5px);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  color: rgba(240, 230, 224, 0.88);
+  max-width: 620px;
+  margin: 0 0 24px;
+}
+
+.exp__future-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.exp__future-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: rgba(20, 10, 12, 0.85);
+  border: 1px solid rgba(222, 27, 28, 0.45);
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(8.5px, 0.68vw, 10.5px);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffd8b2;
+}
+
+.exp__future-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(9px, 0.72vw, 11px);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.exp__future-badge {
+  color: #ff9d88;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: rgba(222, 27, 28, 0.12);
+  border: 1px solid rgba(222, 27, 28, 0.35);
+}
+
+.exp__future-batch {
+  color: rgba(240, 230, 224, 0.65);
+}
+
+/* Mobile & Tablet responsive adjustments */
+@media (max-width: 959px) {
+  .exp__slide {
+    padding: calc(var(--hdr-h, 58px) + 4px) clamp(14px, 3.5vw, 28px) clamp(12px, 2vh, 20px);
+  }
+  .exp__stage {
+    grid-template-columns: 46% 54%;
+    gap: 14px;
+  }
+  .exp__left-col {
+    gap: 12px;
+    padding-top: 2px;
+  }
+  .exp__office-display {
+    width: 100%;
+    max-width: 100%;
+  }
+  .exp__display-glass {
+    padding: 12px 14px;
+  }
+  .exp__display-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-bottom: 8px;
+  }
+  .exp__display-right {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .exp__display-summary {
+    padding-top: 8px;
+  }
+  .exp__details-project {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .exp__display-desc {
+    font-size: 11px;
+    line-height: 1.42;
+  }
+  .exp__char-col {
+  position: relative;
+  width: clamp(135px, 13.5vw, 185px);
+  }
+  .exp__char-fig {
+  display: block;
+  width: 100%;
+  max-height: clamp(210px, 33svh, 315px);
+  }
+  .exp__bld-sketch {
+    max-height: clamp(220px, 44svh, 380px);
+  }
+  .exp__signboard {
+    top: 18%;
+    left: 10%;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .exp__stage {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+  }
+  .exp__left-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .exp__display-role {
+    font-size: 15px;
+  }
+  .exp__display-company {
+    font-size: 12.5px;
+  }
+  .exp__signboard {
+    top: 14%;
+    left: 6%;
+    padding: 3px 8px;
+  }
+  .exp__signboard-text {
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+  }
+}

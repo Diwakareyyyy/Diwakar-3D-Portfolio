@@ -1,0 +1,356 @@
+/* ==========================================================================
+   The finale — the closing shot & contact.
+   Deep black + dark red + crimson + cream. The furnace canvas sits behind a
+   giant S DIWAKAR set in real type (Anton, stretched to the reference's
+   ultra-tall poster proportions, wearing the extracted grunge), the man's
+   canvas rides in front of the title, and the editorial captions + the quiet
+   functional row hold the edges.
+   ========================================================================== */
+
+/* Two frames of one closing scene: the pinned stage holds frame 1 (the
+   closing composition) while the extra scroll room drives frame 2 sliding in
+   from the left over it. */
+.fin {
+  position: relative;
+  height: 180svh;
+  background: #000;
+}
+
+.fin__pin {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+  background: #000;
+}
+
+.fin__stage1 {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+#finBack,
+#finMan {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#finBack { z-index: 1; }
+#finMan { z-index: 3; pointer-events: none; }
+
+/* dims frame 1 as frame 2 advances over it */
+.fin__dim {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Frame 2 — the supplied still, full-bleed, entering from the LEFT under
+   scroll control (boot6 writes its transform). Its leading edge throws a
+   soft shadow onto frame 1, and a grain veil keeps it in the film's stock.
+   -------------------------------------------------------------------------- */
+.fin__frame2 {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  margin: 0;
+  transform: translate3d(-104%, 0, 0);
+  will-change: transform, filter;
+  pointer-events: none;
+  box-shadow: 42px 0 110px rgba(0, 0, 0, 0.62);
+  background: #0a0203;
+}
+.fin__frame2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 42%;
+  display: block;
+  user-select: none;
+}
+.fin__frame2::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../../public/tex/grain.png') repeat;
+  background-size: 340px;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Editorial captions — Pure cinematic typography without heavy boxes.
+   High-contrast warm ivory text, radiant neon ember role tags, delicate
+   accent lines, and crisp multi-layered shadows for 100% legibility
+   while keeping the dual-tone DIWAKAR title unobstructed and dominant.
+   -------------------------------------------------------------------------- */
+
+.f-cap {
+  position: absolute;
+  margin: 0;
+  z-index: 10;
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(10px, 0.86vw, 13px);
+  font-weight: 500;
+  line-height: 1.85;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #dcd4cb; /* High-contrast warm ivory tone */
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.95),
+    0 0 16px rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.8s ease calc(var(--li, 0) * 0.12s),
+              transform 1s cubic-bezier(0.22, 1, 0.36, 1) calc(var(--li, 0) * 0.12s);
+  pointer-events: none;
+}
+.fin.is-caps .f-cap,
+.fin.is-set .f-cap { opacity: 1; transform: none; }
+
+.f-cap--tl {
+  top: clamp(24px, 5.5vh, 60px);
+  left: clamp(28px, 4.2vw, 76px);
+  padding-left: 14px;
+  border-left: 2px solid rgba(238, 91, 72, 0.65);
+}
+
+.f-cap__role {
+  display: block;
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: #ee5b48;
+  margin-bottom: 0.35em;
+  text-shadow: 0 0 8px rgba(238, 91, 72, 0.45);
+}
+
+.f-cap__name {
+  color: #eee7df;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-shadow: 0 0 8px rgba(238, 91, 72, 0.35);
+}
+
+.f-cap--quote {
+  top: 36%;
+  left: clamp(28px, 4.2vw, 76px);
+  max-width: clamp(280px, 34vw, 460px);
+  font-size: clamp(11.5px, 0.98vw, 15px);
+  letter-spacing: 0.20em;
+  color: #e4dcd3;
+  line-height: 1.7;
+  padding-left: 16px;
+  border-left: 2px solid rgba(238, 91, 72, 0.65);
+}
+.f-cap--quote small {
+  display: block;
+  font-size: 0.78em;
+  letter-spacing: 0.14em;
+  color: #c8beb5;
+  margin-top: 0.8em;
+  line-height: 1.55;
+  text-transform: none;
+}
+.f-cap--quote::after {
+  content: '';
+  display: block;
+  width: 2.4em;
+  height: 2px;
+  margin-top: 1.2em;
+  background: rgba(255, 69, 50, 0.8);
+  box-shadow: 0 0 8px #ff4532;
+}
+
+.f-cap--blw {
+  bottom: clamp(68px, 11vh, 115px);
+  left: clamp(28px, 4.2vw, 76px);
+  padding-left: 14px;
+  border-left: 2px solid rgba(238, 91, 72, 0.65);
+}
+
+.f-cap--tr {
+  top: clamp(24px, 5.5vh, 60px);
+  right: clamp(28px, 4.2vw, 76px);
+  text-align: right;
+  padding-right: 14px;
+  border-right: 2px solid rgba(238, 91, 72, 0.65);
+}
+.f-cap--tr::after,
+.f-cap--br::after {
+  content: '';
+  display: none;
+}
+
+.f-cap--br {
+  bottom: clamp(68px, 11vh, 115px);
+  right: clamp(28px, 4.2vw, 76px);
+  text-align: right;
+  padding-right: 14px;
+  border-right: 2px solid rgba(238, 91, 72, 0.65);
+}
+
+/* --------------------------------------------------------------------------
+   Quiet functional bar at the bottom: contact endpoints + profiles + copyright.
+   Solid dark background so it never dissolves into the smoke.
+   -------------------------------------------------------------------------- */
+.fin__bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px clamp(28px, 4.2vw, 76px);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(5, 1, 2, 0.92) 28%, #000 100%);
+  font-family: var(--ui, 'Oswald', sans-serif);
+  font-size: clamp(9px, 0.72vw, 11px);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.fin__primary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.fin__primary a {
+  color: #efe5dc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.fin__primary a:hover { color: #ff4532; }
+.fin__tag {
+  color: #ff4532;
+  font-weight: 700;
+  font-size: 0.85em;
+  letter-spacing: 0.28em;
+}
+.fin__sep { color: rgba(222, 27, 28, 0.55); }
+
+.fin__soc {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.fin__soc a {
+  color: #efe5dc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.fin__soc a:hover { color: #ff4532; }
+
+.fin__c {
+  color: rgba(215, 195, 185, 0.65);
+  font-size: 0.9em;
+  letter-spacing: 0.20em;
+}
+
+@media (max-width: 900px) {
+  .f-cap--tl {
+    top: clamp(54px, 7vh, 72px);
+    left: 20px;
+  }
+  .f-cap--tr {
+    top: clamp(54px, 7vh, 72px);
+    right: 20px;
+  }
+  .f-cap--quote {
+    top: 30%;
+    left: 20px;
+    max-width: min(360px, 56vw);
+  }
+  .f-cap--blw {
+    bottom: 130px;
+    left: 20px;
+  }
+  .f-cap--br {
+    bottom: 130px;
+    right: 20px;
+  }
+  .fin__bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 20px 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .f-cap {
+    font-size: 9px;
+    line-height: 1.55;
+    letter-spacing: 0.16em;
+  }
+  .f-cap--tl {
+    top: 56px;
+    left: 16px;
+    max-width: calc(100vw - 32px);
+  }
+  .f-cap--quote {
+    top: 158px;
+    left: 16px;
+    right: 16px;
+    max-width: calc(100vw - 32px);
+    font-size: 10.5px;
+    line-height: 1.45;
+  }
+  .f-cap--quote small {
+    margin-top: 0.45em;
+    line-height: 1.4;
+  }
+  .f-cap--quote::after {
+    margin-top: 0.65em;
+  }
+  .f-cap--tr {
+    top: auto;
+    bottom: 204px;
+    right: 16px;
+    max-width: 48vw;
+  }
+  .f-cap--blw {
+    bottom: 126px;
+    left: 16px;
+    max-width: 46vw;
+  }
+  .f-cap--br {
+    bottom: 126px;
+    right: 16px;
+    max-width: 48vw;
+  }
+  .fin__bar {
+    gap: 8px;
+    padding: 12px 16px 14px;
+    font-size: 8.5px;
+    letter-spacing: 0.15em;
+  }
+  .fin__primary {
+    gap: 8px 12px;
+  }
+  .fin__soc {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .fin__soc a {
+    padding: 4px 0;
+  }
+}

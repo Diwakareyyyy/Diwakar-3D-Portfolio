@@ -1,0 +1,1788 @@
+[
+  {
+    "path": "1000306733-Picsart-BackgroundRemover.webm",
+    "filename": "1000306733-Picsart-BackgroundRemover.webm",
+    "format": "WEBM",
+    "dimensions": "Video",
+    "size_kb": 10684.0,
+    "referenced_in": [],
+    "section": "Unknown",
+    "status": "REMOVE"
+  },
+  {
+    "path": "all the dots.jpg",
+    "filename": "all the dots.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 25.0,
+    "referenced_in": [],
+    "section": "Root - Original Owner Assets",
+    "status": "REMOVE"
+  },
+  {
+    "path": "Blank Screen.jpg",
+    "filename": "Blank Screen.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 13.0,
+    "referenced_in": [],
+    "section": "Root - Original Owner Assets",
+    "status": "REMOVE"
+  },
+  {
+    "path": "chair.jpeg",
+    "filename": "chair.jpeg",
+    "format": "JPEG",
+    "dimensions": "1024x1536",
+    "size_kb": 218.8,
+    "referenced_in": [],
+    "section": "Unknown",
+    "status": "REMOVE"
+  },
+  {
+    "path": "footer 2nd image.jpg",
+    "filename": "footer 2nd image.jpg",
+    "format": "JPG",
+    "dimensions": "1599x968",
+    "size_kb": 100.5,
+    "referenced_in": [],
+    "section": "Root - Design & Video References",
+    "status": "KEEP"
+  },
+  {
+    "path": "Footer image.jpg",
+    "filename": "Footer image.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 113.3,
+    "referenced_in": [
+      "src\\gl\\shaders6.js"
+    ],
+    "section": "Root - Design & Video References",
+    "status": "REVIEW"
+  },
+  {
+    "path": "Diwakar  video 2.mp4",
+    "filename": "Diwakar  video 2.mp4",
+    "format": "MP4",
+    "dimensions": "Video",
+    "size_kb": 2350.8,
+    "referenced_in": [],
+    "section": "Root - Original Owner Assets",
+    "status": "REMOVE"
+  },
+  {
+    "path": "Diwakar typo.jpg",
+    "filename": "Diwakar typo.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 96.5,
+    "referenced_in": [],
+    "section": "Root - Original Owner Assets",
+    "status": "REMOVE"
+  },
+  {
+    "path": "Diwakar video 1.mp4",
+    "filename": "Diwakar video 1.mp4",
+    "format": "MP4",
+    "dimensions": "Video",
+    "size_kb": 2127.5,
+    "referenced_in": [],
+    "section": "Root - Design & Video References",
+    "status": "REVIEW"
+  },
+  {
+    "path": "Diwakar video 3.mov",
+    "filename": "Diwakar video 3.mov",
+    "format": "MOV",
+    "dimensions": "Video",
+    "size_kb": 1898.8,
+    "referenced_in": [],
+    "section": "Root - Original Owner Assets",
+    "status": "REMOVE"
+  },
+  {
+    "path": "Header.jpg",
+    "filename": "Header.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 26.4,
+    "referenced_in": [],
+    "section": "Root - Original Owner Assets",
+    "status": "REMOVE"
+  },
+  {
+    "path": "main refrence.jpg",
+    "filename": "main refrence.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 152.0,
+    "referenced_in": [],
+    "section": "Root - Original Owner Assets",
+    "status": "REMOVE"
+  },
+  {
+    "path": "Man_walking_and_smoking_cigarette_202609051235.mp4",
+    "filename": "Man_walking_and_smoking_cigarette_202609051235.mp4",
+    "format": "MP4",
+    "dimensions": "Video",
+    "size_kb": 2313.0,
+    "referenced_in": [],
+    "section": "Root - Original Owner Assets",
+    "status": "REMOVE"
+  },
+  {
+    "path": "section 2 image.jpg",
+    "filename": "section 2 image.jpg",
+    "format": "JPG",
+    "dimensions": "1280x783",
+    "size_kb": 61.9,
+    "referenced_in": [],
+    "section": "Root - Design & Video References",
+    "status": "REVIEW"
+  },
+  {
+    "path": "section 2 refrence video.mp4",
+    "filename": "section 2 refrence video.mp4",
+    "format": "MP4",
+    "dimensions": "Video",
+    "size_kb": 3374.8,
+    "referenced_in": [],
+    "section": "Root - Design & Video References",
+    "status": "REVIEW"
+  },
+  {
+    "path": "section 3 image.jpg",
+    "filename": "section 3 image.jpg",
+    "format": "JPG",
+    "dimensions": "1280x720",
+    "size_kb": 80.9,
+    "referenced_in": [],
+    "section": "Root - Design & Video References",
+    "status": "REVIEW"
+  },
+  {
+    "path": "section 4 image.jpg",
+    "filename": "section 4 image.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 154.5,
+    "referenced_in": [],
+    "section": "Root - Design & Video References",
+    "status": "REVIEW"
+  },
+  {
+    "path": "section 5 main refrence.jpg",
+    "filename": "section 5 main refrence.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 129.9,
+    "referenced_in": [],
+    "section": "Root - Design & Video References",
+    "status": "REVIEW"
+  },
+  {
+    "path": "test_iio.mp4",
+    "filename": "test_iio.mp4",
+    "format": "MP4",
+    "dimensions": "Video",
+    "size_kb": 0.0,
+    "referenced_in": [],
+    "section": "Root - Original Owner Assets",
+    "status": "REMOVE"
+  },
+  {
+    "path": "welcome to my world.jpg",
+    "filename": "welcome to my world.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 25.9,
+    "referenced_in": [],
+    "section": "Root - Original Owner Assets",
+    "status": "REMOVE"
+  },
+  {
+    "path": "assets_src/ref_furniture.jpg",
+    "filename": "ref_furniture.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 25.0,
+    "referenced_in": [],
+    "section": "Original Owner Source Archives",
+    "status": "REMOVE"
+  },
+  {
+    "path": "assets_src/ref_header.jpg",
+    "filename": "ref_header.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 26.4,
+    "referenced_in": [],
+    "section": "Original Owner Source Archives",
+    "status": "REMOVE"
+  },
+  {
+    "path": "assets_src/ref_main.jpg",
+    "filename": "ref_main.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 152.0,
+    "referenced_in": [],
+    "section": "Original Owner Source Archives",
+    "status": "REMOVE"
+  },
+  {
+    "path": "assets_src/ref_typo.jpg",
+    "filename": "ref_typo.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 96.5,
+    "referenced_in": [],
+    "section": "Original Owner Source Archives",
+    "status": "REMOVE"
+  },
+  {
+    "path": "assets_src/v1.mp4",
+    "filename": "v1.mp4",
+    "format": "MP4",
+    "dimensions": "Video",
+    "size_kb": 2767.8,
+    "referenced_in": [],
+    "section": "Original Owner Source Archives",
+    "status": "REMOVE"
+  },
+  {
+    "path": "assets_src/v2.mp4",
+    "filename": "v2.mp4",
+    "format": "MP4",
+    "dimensions": "Video",
+    "size_kb": 2350.8,
+    "referenced_in": [],
+    "section": "Original Owner Source Archives",
+    "status": "REMOVE"
+  },
+  {
+    "path": "assets_src/v3.mov",
+    "filename": "v3.mov",
+    "format": "MOV",
+    "dimensions": "Video",
+    "size_kb": 1898.8,
+    "referenced_in": [],
+    "section": "Original Owner Source Archives",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/resume.pdf",
+    "filename": "resume.pdf",
+    "format": "PDF",
+    "dimensions": "N/A",
+    "size_kb": 0.3,
+    "referenced_in": [
+      "index.html",
+      "src\\scene3\\layout3.js"
+    ],
+    "section": "Global - Resume / CV",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/audio/boot_step_left.wav",
+    "filename": "boot_step_left.wav",
+    "format": "WAV",
+    "dimensions": "N/A",
+    "size_kb": 36.2,
+    "referenced_in": [
+      "src\\lib\\audio.js"
+    ],
+    "section": "Global - Audio",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/audio/boot_step_right.wav",
+    "filename": "boot_step_right.wav",
+    "format": "WAV",
+    "dimensions": "N/A",
+    "size_kb": 36.2,
+    "referenced_in": [
+      "src\\lib\\audio.js"
+    ],
+    "section": "Global - Audio",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/audio/cinematic_theme.wav",
+    "filename": "cinematic_theme.wav",
+    "format": "WAV",
+    "dimensions": "N/A",
+    "size_kb": 2756.3,
+    "referenced_in": [
+      "src\\lib\\audio.js"
+    ],
+    "section": "Global - Audio",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/certs/11.png",
+    "filename": "11.png",
+    "format": "PNG",
+    "dimensions": "359x694",
+    "size_kb": 164.3,
+    "referenced_in": [],
+    "section": "Scene 5 - Certificates",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/certs/c01_figma.png",
+    "filename": "c01_figma.png",
+    "format": "PNG",
+    "dimensions": "312x269",
+    "size_kb": 109.2,
+    "referenced_in": [],
+    "section": "Scene 5 - Certificates",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/certs/c02_google.png",
+    "filename": "c02_google.png",
+    "format": "PNG",
+    "dimensions": "317x264",
+    "size_kb": 107.4,
+    "referenced_in": [],
+    "section": "Scene 5 - Certificates",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/certs/c03_adobe.png",
+    "filename": "c03_adobe.png",
+    "format": "PNG",
+    "dimensions": "340x250",
+    "size_kb": 110.3,
+    "referenced_in": [],
+    "section": "Scene 5 - Certificates",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/certs/c04_fcc.png",
+    "filename": "c04_fcc.png",
+    "format": "PNG",
+    "dimensions": "340x272",
+    "size_kb": 114.9,
+    "referenced_in": [],
+    "section": "Scene 5 - Certificates",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/certs/c05_meta.png",
+    "filename": "c05_meta.png",
+    "format": "PNG",
+    "dimensions": "346x280",
+    "size_kb": 131.9,
+    "referenced_in": [],
+    "section": "Scene 5 - Certificates",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/certs/person_walking.png",
+    "filename": "person_walking.png",
+    "format": "PNG",
+    "dimensions": "408x612",
+    "size_kb": 270.3,
+    "referenced_in": [
+      "index.html"
+    ],
+    "section": "Scene 5 - Certificates",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/certs/placeholder_01.png",
+    "filename": "placeholder_01.png",
+    "format": "PNG",
+    "dimensions": "1200x800",
+    "size_kb": 56.5,
+    "referenced_in": [
+      "index.html",
+      "src\\data\\certificates.js",
+      "src\\scene5\\boot5.js"
+    ],
+    "section": "Scene 5 - Certificates",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/certs/placeholder_02.png",
+    "filename": "placeholder_02.png",
+    "format": "PNG",
+    "dimensions": "1200x800",
+    "size_kb": 57.7,
+    "referenced_in": [
+      "src\\data\\certificates.js"
+    ],
+    "section": "Scene 5 - Certificates",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/certs/placeholder_03.png",
+    "filename": "placeholder_03.png",
+    "format": "PNG",
+    "dimensions": "1200x800",
+    "size_kb": 59.1,
+    "referenced_in": [
+      "src\\data\\certificates.js"
+    ],
+    "section": "Scene 5 - Certificates",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/certs/placeholder_04.png",
+    "filename": "placeholder_04.png",
+    "format": "PNG",
+    "dimensions": "1200x800",
+    "size_kb": 60.1,
+    "referenced_in": [
+      "src\\data\\certificates.js"
+    ],
+    "section": "Scene 5 - Certificates",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/certs/placeholder_05.png",
+    "filename": "placeholder_05.png",
+    "format": "PNG",
+    "dimensions": "1200x800",
+    "size_kb": 59.4,
+    "referenced_in": [
+      "src\\data\\certificates.js"
+    ],
+    "section": "Scene 5 - Certificates",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/certs/plate.jpg",
+    "filename": "plate.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 62.1,
+    "referenced_in": [
+      "src\\scene4\\gallery.js",
+      "src\\scene5\\certs.js",
+      "src\\scene6\\finale.js",
+      "src\\styles\\projects.css"
+    ],
+    "section": "Scene 5 - Certificates",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/certs/plate_with_man.jpg",
+    "filename": "plate_with_man.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 154.0,
+    "referenced_in": [],
+    "section": "Scene 5 - Certificates",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/experience/developer.png",
+    "filename": "developer.png",
+    "format": "PNG",
+    "dimensions": "800x1200",
+    "size_kb": 1674.2,
+    "referenced_in": [],
+    "section": "Scene 3.5 - Experience",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/experience/developer_facing_building.png",
+    "filename": "developer_facing_building.png",
+    "format": "PNG",
+    "dimensions": "375x1177",
+    "size_kb": 764.3,
+    "referenced_in": [
+      "index.html"
+    ],
+    "section": "Scene 3.5 - Experience",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/experience/developer_facing_right.png",
+    "filename": "developer_facing_right.png",
+    "format": "PNG",
+    "dimensions": "800x1200",
+    "size_kb": 1675.4,
+    "referenced_in": [],
+    "section": "Scene 3.5 - Experience",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/experience/expense_app_preview.png",
+    "filename": "expense_app_preview.png",
+    "format": "PNG",
+    "dimensions": "720x480",
+    "size_kb": 52.0,
+    "referenced_in": [
+      "index.html",
+      "src\\data\\experience.js"
+    ],
+    "section": "Scene 3.5 - Experience",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/experience/diwakar_walking.png",
+    "filename": "diwakar_walking.png",
+    "format": "PNG",
+    "dimensions": "359x694",
+    "size_kb": 164.3,
+    "referenced_in": [],
+    "section": "Scene 3.5 - Experience",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/experience/office_building.jpg",
+    "filename": "office_building.jpg",
+    "format": "JPG",
+    "dimensions": "1376x768",
+    "size_kb": 920.9,
+    "referenced_in": [],
+    "section": "Scene 3.5 - Experience",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/experience/office_building_3d.jpg",
+    "filename": "office_building_3d.jpg",
+    "format": "JPG",
+    "dimensions": "1254x768",
+    "size_kb": 220.0,
+    "referenced_in": [],
+    "section": "Scene 3.5 - Experience",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/experience/office_building_3d.png",
+    "filename": "office_building_3d.png",
+    "format": "PNG",
+    "dimensions": "1254x768",
+    "size_kb": 1527.3,
+    "referenced_in": [],
+    "section": "Scene 3.5 - Experience",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/experience/office_sketch_startup.jpg",
+    "filename": "office_sketch_startup.jpg",
+    "format": "JPG",
+    "dimensions": "1274x734",
+    "size_kb": 231.9,
+    "referenced_in": [],
+    "section": "Scene 3.5 - Experience",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/experience/office_sketch_startup.png",
+    "filename": "office_sketch_startup.png",
+    "format": "PNG",
+    "dimensions": "1274x734",
+    "size_kb": 1565.2,
+    "referenced_in": [
+      "index.html"
+    ],
+    "section": "Scene 3.5 - Experience",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/fin/crop_preview.jpg",
+    "filename": "crop_preview.jpg",
+    "format": "JPG",
+    "dimensions": "1600x350",
+    "size_kb": 113.2,
+    "referenced_in": [],
+    "section": "Scene 6 - Finale",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/fin/man.png",
+    "filename": "man.png",
+    "format": "PNG",
+    "dimensions": "432x578",
+    "size_kb": 122.5,
+    "referenced_in": [
+      "src\\scene6\\finale.js"
+    ],
+    "section": "Scene 6 - Finale",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/fin/plate.jpg",
+    "filename": "plate.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 133.8,
+    "referenced_in": [
+      "src\\scene4\\gallery.js",
+      "src\\scene5\\certs.js",
+      "src\\scene6\\finale.js",
+      "src\\styles\\projects.css"
+    ],
+    "section": "Scene 6 - Finale",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/fonts/anton-400.woff2",
+    "filename": "anton-400.woff2",
+    "format": "WOFF2",
+    "dimensions": "Font",
+    "size_kb": 18.2,
+    "referenced_in": [
+      "index.html",
+      "src\\styles\\app.css"
+    ],
+    "section": "Global - Typography",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/fonts/bodonimoda-400.woff2",
+    "filename": "bodonimoda-400.woff2",
+    "format": "WOFF2",
+    "dimensions": "Font",
+    "size_kb": 45.2,
+    "referenced_in": [
+      "src\\styles\\chrono.css"
+    ],
+    "section": "Global - Typography",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/fonts/bodonimoda-500.woff2",
+    "filename": "bodonimoda-500.woff2",
+    "format": "WOFF2",
+    "dimensions": "Font",
+    "size_kb": 45.2,
+    "referenced_in": [],
+    "section": "Global - Typography",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/fonts/oswald-300.woff2",
+    "filename": "oswald-300.woff2",
+    "format": "WOFF2",
+    "dimensions": "Font",
+    "size_kb": 27.8,
+    "referenced_in": [
+      "src\\styles\\app.css"
+    ],
+    "section": "Global - Typography",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/fonts/oswald-400.woff2",
+    "filename": "oswald-400.woff2",
+    "format": "WOFF2",
+    "dimensions": "Font",
+    "size_kb": 27.8,
+    "referenced_in": [
+      "src\\styles\\app.css"
+    ],
+    "section": "Global - Typography",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/fonts/oswald-500.woff2",
+    "filename": "oswald-500.woff2",
+    "format": "WOFF2",
+    "dimensions": "Font",
+    "size_kb": 27.8,
+    "referenced_in": [
+      "index.html",
+      "src\\styles\\app.css"
+    ],
+    "section": "Global - Typography",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/fonts/oswald-600.woff2",
+    "filename": "oswald-600.woff2",
+    "format": "WOFF2",
+    "dimensions": "Font",
+    "size_kb": 27.8,
+    "referenced_in": [
+      "src\\styles\\app.css"
+    ],
+    "section": "Global - Typography",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/fonts/oswald-700.woff2",
+    "filename": "oswald-700.woff2",
+    "format": "WOFF2",
+    "dimensions": "Font",
+    "size_kb": 27.8,
+    "referenced_in": [
+      "index.html",
+      "src\\styles\\app.css"
+    ],
+    "section": "Global - Typography",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/media/1000306733-Picsart-BackgroundRemover.webm",
+    "filename": "1000306733-Picsart-BackgroundRemover.webm",
+    "format": "WEBM",
+    "dimensions": "Video",
+    "size_kb": 10684.0,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/11.jpg",
+    "filename": "11.jpg",
+    "format": "JPG",
+    "dimensions": "720x1280",
+    "size_kb": 79.7,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/crop_claude_ref.jpg",
+    "filename": "crop_claude_ref.jpg",
+    "format": "JPG",
+    "dimensions": "320x306",
+    "size_kb": 16.9,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/crop_figma_ref.jpg",
+    "filename": "crop_figma_ref.jpg",
+    "format": "JPG",
+    "dimensions": "218x352",
+    "size_kb": 13.5,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/crop_fr_ref.jpg",
+    "filename": "crop_fr_ref.jpg",
+    "format": "JPG",
+    "dimensions": "115x157",
+    "size_kb": 4.6,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/crop_gpt_ref.jpg",
+    "filename": "crop_gpt_ref.jpg",
+    "format": "JPG",
+    "dimensions": "154x157",
+    "size_kb": 4.4,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/crop_mj_ref.jpg",
+    "filename": "crop_mj_ref.jpg",
+    "format": "JPG",
+    "dimensions": "230x211",
+    "size_kb": 9.6,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/crop_ps_ref.jpg",
+    "filename": "crop_ps_ref.jpg",
+    "format": "JPG",
+    "dimensions": "256x234",
+    "size_kb": 7.4,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/crop_spline_ref.jpg",
+    "filename": "crop_spline_ref.jpg",
+    "format": "JPG",
+    "dimensions": "167x134",
+    "size_kb": 5.3,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/crop_wf_ref.jpg",
+    "filename": "crop_wf_ref.jpg",
+    "format": "JPG",
+    "dimensions": "141x165",
+    "size_kb": 5.9,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/diwakar1_f0.jpg",
+    "filename": "diwakar1_f0.jpg",
+    "format": "JPG",
+    "dimensions": "848x480",
+    "size_kb": 24.6,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/diwakar1_f120.jpg",
+    "filename": "diwakar1_f120.jpg",
+    "format": "JPG",
+    "dimensions": "848x480",
+    "size_kb": 53.8,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/diwakar1_f180.jpg",
+    "filename": "diwakar1_f180.jpg",
+    "format": "JPG",
+    "dimensions": "848x480",
+    "size_kb": 69.7,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/diwakar1_f239.jpg",
+    "filename": "diwakar1_f239.jpg",
+    "format": "JPG",
+    "dimensions": "848x480",
+    "size_kb": 54.9,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/diwakar1_f60.jpg",
+    "filename": "diwakar1_f60.jpg",
+    "format": "JPG",
+    "dimensions": "848x480",
+    "size_kb": 74.1,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/diwakar1_preview.jpg",
+    "filename": "diwakar1_preview.jpg",
+    "format": "JPG",
+    "dimensions": "848x480",
+    "size_kb": 24.6,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/hero.jpg",
+    "filename": "hero.jpg",
+    "format": "JPG",
+    "dimensions": "848x480",
+    "size_kb": 14.8,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/media/hero.mp4",
+    "filename": "hero.mp4",
+    "format": "MP4",
+    "dimensions": "Video",
+    "size_kb": 2127.5,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/media/hero.webm",
+    "filename": "hero.webm",
+    "format": "WEBM",
+    "dimensions": "Video",
+    "size_kb": 10684.0,
+    "referenced_in": [
+      "public\\media\\manifest.json"
+    ],
+    "section": "Scene 1 & 2 - Media",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/media/hero_frame0.jpg",
+    "filename": "hero_frame0.jpg",
+    "format": "JPG",
+    "dimensions": "1440x1280",
+    "size_kb": 92.9,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/hero_new.png",
+    "filename": "hero_new.png",
+    "format": "PNG",
+    "dimensions": "408x612",
+    "size_kb": 270.3,
+    "referenced_in": [
+      "public\\media\\manifest.json"
+    ],
+    "section": "Scene 1 & 2 - Media",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/media/hero_v1_backup.mp4",
+    "filename": "hero_v1_backup.mp4",
+    "format": "MP4",
+    "dimensions": "Video",
+    "size_kb": 2979.0,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REVIEW"
+  },
+  {
+    "path": "public/media/test_comp_f0.jpg",
+    "filename": "test_comp_f0.jpg",
+    "format": "JPG",
+    "dimensions": "848x480",
+    "size_kb": 54.8,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/test_comp_f120.jpg",
+    "filename": "test_comp_f120.jpg",
+    "format": "JPG",
+    "dimensions": "848x480",
+    "size_kb": 91.2,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/test_comp_f180.jpg",
+    "filename": "test_comp_f180.jpg",
+    "format": "JPG",
+    "dimensions": "848x480",
+    "size_kb": 79.8,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/test_comp_f60.jpg",
+    "filename": "test_comp_f60.jpg",
+    "format": "JPG",
+    "dimensions": "848x480",
+    "size_kb": 94.0,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/media/universe.jpg",
+    "filename": "universe.jpg",
+    "format": "JPG",
+    "dimensions": "1280x720",
+    "size_kb": 54.6,
+    "referenced_in": [
+      "index.html",
+      "src\\styles\\universe.css"
+    ],
+    "section": "Scene 1 & 2 - Media",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/media/universe.mp4",
+    "filename": "universe.mp4",
+    "format": "MP4",
+    "dimensions": "Video",
+    "size_kb": 3206.8,
+    "referenced_in": [
+      "index.html"
+    ],
+    "section": "Scene 1 & 2 - Media",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/media/v1_preview.jpg",
+    "filename": "v1_preview.jpg",
+    "format": "JPG",
+    "dimensions": "720x1280",
+    "size_kb": 74.5,
+    "referenced_in": [],
+    "section": "Scene 1 & 2 - Media",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/projects/p01_evcdrp.png",
+    "filename": "p01_evcdrp.png",
+    "format": "PNG",
+    "dimensions": "492x302",
+    "size_kb": 53.7,
+    "referenced_in": [
+      "index.html",
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p01_timeless.png",
+    "filename": "p01_timeless.png",
+    "format": "PNG",
+    "dimensions": "384x273",
+    "size_kb": 163.9,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p02_expense.png",
+    "filename": "p02_expense.png",
+    "format": "PNG",
+    "dimensions": "395x280",
+    "size_kb": 46.2,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p02_game.png",
+    "filename": "p02_game.png",
+    "format": "PNG",
+    "dimensions": "428x269",
+    "size_kb": 173.6,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p03_build.png",
+    "filename": "p03_build.png",
+    "format": "PNG",
+    "dimensions": "471x288",
+    "size_kb": 145.5,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p03_cloud.png",
+    "filename": "p03_cloud.png",
+    "format": "PNG",
+    "dimensions": "440x360",
+    "size_kb": 50.2,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p04_driven.png",
+    "filename": "p04_driven.png",
+    "format": "PNG",
+    "dimensions": "460x377",
+    "size_kb": 276.1,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p04_sevra.png",
+    "filename": "p04_sevra.png",
+    "format": "PNG",
+    "dimensions": "365x255",
+    "size_kb": 42.0,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p05_ideas.png",
+    "filename": "p05_ideas.png",
+    "format": "PNG",
+    "dimensions": "232x198",
+    "size_kb": 77.4,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p05_vehiclegpt.png",
+    "filename": "p05_vehiclegpt.png",
+    "format": "PNG",
+    "dimensions": "350x245",
+    "size_kb": 33.4,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p06_perry.png",
+    "filename": "p06_perry.png",
+    "format": "PNG",
+    "dimensions": "415x260",
+    "size_kb": 35.9,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p06_sound.png",
+    "filename": "p06_sound.png",
+    "format": "PNG",
+    "dimensions": "173x203",
+    "size_kb": 58.2,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p07_food.png",
+    "filename": "p07_food.png",
+    "format": "PNG",
+    "dimensions": "211x204",
+    "size_kb": 76.0,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p07_icicdt.png",
+    "filename": "p07_icicdt.png",
+    "format": "PNG",
+    "dimensions": "360x248",
+    "size_kb": 36.3,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p08_baimmozhi.png",
+    "filename": "p08_baimmozhi.png",
+    "format": "PNG",
+    "dimensions": "230x200",
+    "size_kb": 25.3,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p08_travel.png",
+    "filename": "p08_travel.png",
+    "format": "PNG",
+    "dimensions": "195x206",
+    "size_kb": 66.1,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p09_glitch.png",
+    "filename": "p09_glitch.png",
+    "format": "PNG",
+    "dimensions": "175x205",
+    "size_kb": 21.4,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p09_space.png",
+    "filename": "p09_space.png",
+    "format": "PNG",
+    "dimensions": "231x208",
+    "size_kb": 81.7,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p10_drdms.png",
+    "filename": "p10_drdms.png",
+    "format": "PNG",
+    "dimensions": "215x206",
+    "size_kb": 26.7,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p10_play.png",
+    "filename": "p10_play.png",
+    "format": "PNG",
+    "dimensions": "355x242",
+    "size_kb": 133.7,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p11_cleaner.png",
+    "filename": "p11_cleaner.png",
+    "format": "PNG",
+    "dimensions": "345x243",
+    "size_kb": 141.3,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p11_ocr.png",
+    "filename": "p11_ocr.png",
+    "format": "PNG",
+    "dimensions": "195x206",
+    "size_kb": 24.5,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p12_cir.png",
+    "filename": "p12_cir.png",
+    "format": "PNG",
+    "dimensions": "235x210",
+    "size_kb": 25.8,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p12_steps.png",
+    "filename": "p12_steps.png",
+    "format": "PNG",
+    "dimensions": "325x234",
+    "size_kb": 114.8,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p13_clfms.png",
+    "filename": "p13_clfms.png",
+    "format": "PNG",
+    "dimensions": "220x180",
+    "size_kb": 20.8,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p14_marketplace.png",
+    "filename": "p14_marketplace.png",
+    "format": "PNG",
+    "dimensions": "230x185",
+    "size_kb": 23.7,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/p15_jarvis.png",
+    "filename": "p15_jarvis.png",
+    "format": "PNG",
+    "dimensions": "225x180",
+    "size_kb": 21.0,
+    "referenced_in": [
+      "src\\data\\projects.js"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/person.png",
+    "filename": "person.png",
+    "format": "PNG",
+    "dimensions": "1027x849",
+    "size_kb": 963.4,
+    "referenced_in": [
+      "index.html"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/projects/person_seated.png",
+    "filename": "person_seated.png",
+    "format": "PNG",
+    "dimensions": "1027x849",
+    "size_kb": 1093.0,
+    "referenced_in": [],
+    "section": "Scene 4 - Projects",
+    "status": "REVIEW"
+  },
+  {
+    "path": "public/projects/plate.jpg",
+    "filename": "plate.jpg",
+    "format": "JPG",
+    "dimensions": "1600x900",
+    "size_kb": 110.6,
+    "referenced_in": [
+      "src\\scene4\\gallery.js",
+      "src\\scene5\\certs.js",
+      "src\\scene6\\finale.js",
+      "src\\styles\\projects.css"
+    ],
+    "section": "Scene 4 - Projects",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tex/grain.png",
+    "filename": "grain.png",
+    "format": "PNG",
+    "dimensions": "512x512",
+    "size_kb": 224.5,
+    "referenced_in": [
+      "src\\main.js",
+      "src\\scene2\\universe.js",
+      "src\\scene3\\chrono.js",
+      "src\\scene4\\gallery.js",
+      "src\\scene5\\certs.js",
+      "src\\scene6\\finale.js",
+      "src\\styles\\experience.css",
+      "src\\styles\\finale.css"
+    ],
+    "section": "Global - Textures",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tex/grunge.png",
+    "filename": "grunge.png",
+    "format": "PNG",
+    "dimensions": "512x512",
+    "size_kb": 223.3,
+    "referenced_in": [
+      "src\\main.js",
+      "src\\styles\\app.css"
+    ],
+    "section": "Global - Textures",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/aftereffects.png",
+    "filename": "aftereffects.png",
+    "format": "PNG",
+    "dimensions": "84x74",
+    "size_kb": 14.7,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/antigravity.png",
+    "filename": "antigravity.png",
+    "format": "PNG",
+    "dimensions": "512x560",
+    "size_kb": 31.3,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/c.png",
+    "filename": "c.png",
+    "format": "PNG",
+    "dimensions": "200x250",
+    "size_kb": 7.7,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/chatgpt.png",
+    "filename": "chatgpt.png",
+    "format": "PNG",
+    "dimensions": "158x114",
+    "size_kb": 30.9,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/claude.png",
+    "filename": "claude.png",
+    "format": "PNG",
+    "dimensions": "512x560",
+    "size_kb": 32.8,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/cpp.png",
+    "filename": "cpp.png",
+    "format": "PNG",
+    "dimensions": "512x560",
+    "size_kb": 18.9,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/css.png",
+    "filename": "css.png",
+    "format": "PNG",
+    "dimensions": "200x250",
+    "size_kb": 5.8,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/cursor.png",
+    "filename": "cursor.png",
+    "format": "PNG",
+    "dimensions": "200x250",
+    "size_kb": 6.2,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/figma.png",
+    "filename": "figma.png",
+    "format": "PNG",
+    "dimensions": "512x560",
+    "size_kb": 21.2,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/figure.png",
+    "filename": "figure.png",
+    "format": "PNG",
+    "dimensions": "155x434",
+    "size_kb": 68.0,
+    "referenced_in": [
+      "src\\scene2\\universe.js",
+      "src\\scene3\\chrono.js"
+    ],
+    "section": "Scene 2 - Skills",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/flutter.png",
+    "filename": "flutter.png",
+    "format": "PNG",
+    "dimensions": "512x560",
+    "size_kb": 14.0,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/framer.png",
+    "filename": "framer.png",
+    "format": "PNG",
+    "dimensions": "80x135",
+    "size_kb": 21.2,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/github.png",
+    "filename": "github.png",
+    "format": "PNG",
+    "dimensions": "512x560",
+    "size_kb": 22.3,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/html.png",
+    "filename": "html.png",
+    "format": "PNG",
+    "dimensions": "512x560",
+    "size_kb": 16.7,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/java.png",
+    "filename": "java.png",
+    "format": "PNG",
+    "dimensions": "200x250",
+    "size_kb": 7.3,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/lightroom.png",
+    "filename": "lightroom.png",
+    "format": "PNG",
+    "dimensions": "61x70",
+    "size_kb": 9.9,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/lovable.png",
+    "filename": "lovable.png",
+    "format": "PNG",
+    "dimensions": "200x250",
+    "size_kb": 4.5,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/midjourney.png",
+    "filename": "midjourney.png",
+    "format": "PNG",
+    "dimensions": "137x161",
+    "size_kb": 44.0,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/mongodb.png",
+    "filename": "mongodb.png",
+    "format": "PNG",
+    "dimensions": "200x250",
+    "size_kb": 5.8,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/mysql.png",
+    "filename": "mysql.png",
+    "format": "PNG",
+    "dimensions": "200x250",
+    "size_kb": 7.5,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/notion.png",
+    "filename": "notion.png",
+    "format": "PNG",
+    "dimensions": "95x132",
+    "size_kb": 29.7,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/photoshop.png",
+    "filename": "photoshop.png",
+    "format": "PNG",
+    "dimensions": "132x143",
+    "size_kb": 34.2,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/premiere.png",
+    "filename": "premiere.png",
+    "format": "PNG",
+    "dimensions": "63x70",
+    "size_kb": 10.3,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/python.png",
+    "filename": "python.png",
+    "format": "PNG",
+    "dimensions": "512x560",
+    "size_kb": 22.7,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/react.png",
+    "filename": "react.png",
+    "format": "PNG",
+    "dimensions": "512x560",
+    "size_kb": 53.7,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/render.png",
+    "filename": "render.png",
+    "format": "PNG",
+    "dimensions": "200x250",
+    "size_kb": 5.1,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/spline.png",
+    "filename": "spline.png",
+    "format": "PNG",
+    "dimensions": "149x73",
+    "size_kb": 22.0,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/sql.png",
+    "filename": "sql.png",
+    "format": "PNG",
+    "dimensions": "512x560",
+    "size_kb": 34.2,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/vercel.png",
+    "filename": "vercel.png",
+    "format": "PNG",
+    "dimensions": "512x560",
+    "size_kb": 16.8,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/tools/vscode.png",
+    "filename": "vscode.png",
+    "format": "PNG",
+    "dimensions": "200x250",
+    "size_kb": 6.2,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/tools/webflow.png",
+    "filename": "webflow.png",
+    "format": "PNG",
+    "dimensions": "106x114",
+    "size_kb": 28.0,
+    "referenced_in": [],
+    "section": "Scene 2 - Skills",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/years/2021.jpg",
+    "filename": "2021.jpg",
+    "format": "JPG",
+    "dimensions": "264x203",
+    "size_kb": 11.3,
+    "referenced_in": [],
+    "section": "Scene 3 - Journey & Bio",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/years/2022.jpg",
+    "filename": "2022.jpg",
+    "format": "JPG",
+    "dimensions": "264x170",
+    "size_kb": 9.8,
+    "referenced_in": [],
+    "section": "Scene 3 - Journey & Bio",
+    "status": "REMOVE"
+  },
+  {
+    "path": "public/years/2023.jpg",
+    "filename": "2023.jpg",
+    "format": "JPG",
+    "dimensions": "600x420",
+    "size_kb": 39.1,
+    "referenced_in": [],
+    "section": "Scene 3 - Journey & Bio",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/years/2024.jpg",
+    "filename": "2024.jpg",
+    "format": "JPG",
+    "dimensions": "600x420",
+    "size_kb": 38.1,
+    "referenced_in": [],
+    "section": "Scene 3 - Journey & Bio",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/years/2025.jpg",
+    "filename": "2025.jpg",
+    "format": "JPG",
+    "dimensions": "600x420",
+    "size_kb": 39.8,
+    "referenced_in": [],
+    "section": "Scene 3 - Journey & Bio",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/years/2026.jpg",
+    "filename": "2026.jpg",
+    "format": "JPG",
+    "dimensions": "600x420",
+    "size_kb": 38.1,
+    "referenced_in": [],
+    "section": "Scene 3 - Journey & Bio",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/years/2027.jpg",
+    "filename": "2027.jpg",
+    "format": "JPG",
+    "dimensions": "600x420",
+    "size_kb": 41.9,
+    "referenced_in": [],
+    "section": "Scene 3 - Journey & Bio",
+    "status": "KEEP"
+  },
+  {
+    "path": "public/years/figure.png",
+    "filename": "figure.png",
+    "format": "PNG",
+    "dimensions": "123x317",
+    "size_kb": 65.6,
+    "referenced_in": [
+      "src\\scene2\\universe.js",
+      "src\\scene3\\chrono.js"
+    ],
+    "section": "Scene 3 - Journey & Bio",
+    "status": "KEEP"
+  }
+]

@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en" class="is-booting">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>S DIWAKAR - 3D Portfolio </title>
+<meta name="description" content="Portfolio of S Diwakar — Creative Software Developer & 3D Technologist. Crafting interactive digital experiences.">
+<meta name="theme-color" content="#000000">
+
+<link rel="preload" href="public/fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="public/fonts/oswald-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="public/fonts/oswald-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="src/styles/app.css">
+<link rel="stylesheet" href="src/styles/universe.css">
+<link rel="stylesheet" href="src/styles/chrono.css">
+<link rel="stylesheet" href="src/styles/projects.css">
+<link rel="stylesheet" href="src/styles/experience.css">
+<link rel="stylesheet" href="src/styles/certs.css">
+<link rel="stylesheet" href="src/styles/finale.css">
+</head>
+<body>
+
+<!-- the real heading, for search engines and screen readers; the visible
+     wordmark is drawn on the canvas so video can be clipped inside its letters -->
+<h1 class="sr-only">S DIWAKAR — Creative Developer & 3D Technologist. Portfolio and selected works.</h1>
+
+<div class="stage-wrap">
+  <canvas id="stage" aria-hidden="true"></canvas>
+
+  <!-- ------------------------------------------------------------------ -->
+  <div class="furniture" aria-hidden="true">
+    <p class="welcome" id="welcome">
+      <span class="welcome__title">– Welcome to the World of –</span>
+    </p>
+
+    <p class="chip chip--artist" id="chipArtist"><span>•S Diwakar•</span></p>
+    <p class="chip chip--legend" id="chipLegend"><span>•Software Dev•</span></p>
+
+    <div class="arrows arrows--l" id="arrowsL"></div>
+    <div class="arrows arrows--r" id="arrowsR"></div>
+    <!-- only the bottom-right grid remains: the top-left one sat under the
+         navigation and fought with it -->
+    <div class="grid-dots grid-dots--br" id="dotsBR"></div>
+  </div>
+
+  <!-- ------------------------------------------------------------------ -->
+  <div class="boot" id="boot">
+    <div class="boot__bar"><i id="bootFill"></i></div>
+    <button class="boot__enter" id="bootEnter" hidden>
+      <span>Enter</span>
+    </button>
+  </div>
+
+  <noscript>
+    <div class="fallback">
+      <p>S DIWAKAR</p>
+      <small>Software Developer & 3D Technologist</small>
+    </div>
+  </noscript>
+</div>
+
+<!-- Persistent Top Header Navigation (Accessible across all sections) -->
+<header class="hdr" id="hdr">
+  <svg class="hdr__rule" id="hdrRule" aria-hidden="true" preserveAspectRatio="none">
+    <polyline id="hdrRulePath" fill="none" stroke="currentColor" stroke-width="1.25"
+              vector-effect="non-scaling-stroke"/>
+  </svg>
+
+  <a class="hdr__mark" href="#stage" data-nav aria-label="S Diwakar, home">
+    <span class="mark-word">S DIWAKAR</span>
+  </a>
+
+  <span class="hdr__div" aria-hidden="true"></span>
+
+  <p class="hdr__roles">
+    <span>Software</span><span>Creative</span><span>Developer</span>
+  </p>
+
+  <nav class="hdr__nav" aria-label="Primary">
+    <ul>
+      <li><a href="#stage" class="is-active" data-nav>Home</a></li>
+      <li><a href="#universe" data-nav>Skills</a></li>
+      <li><a href="#chrono" data-nav>Journey &amp; Bio</a></li>
+      <li><a href="#experience" data-nav>Experience</a></li>
+      <li><a href="#gallery" data-nav>Work</a></li>
+      <li><a href="#certs" data-nav>Certificates</a></li>
+      <li><a href="#fin" data-nav>Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hdr__meta">
+    <a href="public/resume.pdf" class="hdr__resumeBtn" download="Diwakar_S_Resume.pdf" aria-label="Download Resume">
+      <span>CV / Resume</span>
+    </a>
+    <div class="hdr__metaInfo">
+      <span class="hdr__metaLabel">2023–2027</span>
+      <span class="hdr__collegeLabel">(COLLEGE)</span>
+      <span class="hdr__pips" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+  </div>
+
+  <button class="hdr__burger" id="burger" aria-expanded="false" aria-controls="hdrNavMobile">
+    <span aria-hidden="true"></span><span aria-hidden="true"></span>
+    <span class="sr-only">Menu</span>
+  </button>
+</header>
+
+<!-- Persistent Mobile Navigation Drawer & Trigger (Accessible across all sections) -->
+<button class="mobile-nav-fab" id="mobileNavFab" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open navigation menu">
+  <span aria-hidden="true"></span><span aria-hidden="true"></span>
+</button>
+
+<nav class="menu" id="menu" aria-label="Primary, expanded" hidden>
+  <button class="menu__close" id="menuClose" type="button" aria-label="Close navigation menu">&times;</button>
+  <ul>
+    <li><a href="#stage" class="is-active" data-nav>Home</a></li>
+    <li><a href="#universe" data-nav>Skills</a></li>
+    <li><a href="#chrono" data-nav>Journey &amp; Bio</a></li>
+    <li><a href="#experience" data-nav>Experience</a></li>
+    <li><a href="#gallery" data-nav>Work</a></li>
+    <li><a href="#certs" data-nav>Certificates</a></li>
+    <li><a href="#fin" data-nav>Contact</a></li>
+    <li><a href="public/resume.pdf" class="menu__resume" download="Diwakar_S_Resume.pdf">CV / Resume (PDF)</a></li>
+  </ul>
+  <p class="menu__tag">&bull; S Diwakar &middot; B.E. Computer Science &middot; 2023–2027 &bull;</p>
+</nav>
+
+
+
+<main class="flow">
+  <!-- the hero above is position:fixed, so this reserves its scroll height -->
+  <div class="hero-spacer" id="home" aria-hidden="true"></div>
+
+  <!-- ==================================================================== -->
+  <section class="universe" id="universe" aria-labelledby="uniTitle">
+    <canvas id="uniStage" aria-hidden="true"></canvas>
+
+    <header class="universe__title" id="uniTitle">
+      <p class="universe__over">Scene 02</p>
+      <h2 class="universe__name">The Creative<br>Universe</h2>
+      <p class="universe__sub">Tools · Ideas · People · Impact</p>
+    </header>
+
+    <!-- Atmospheric cyber-cinematic labels matching Section 2 reference -->
+    <div class="uni-hud uni-hud--tl" aria-hidden="true">
+      <span>IDEAS</span>
+      <span>DESIGN</span>
+      <span>BUILD</span>
+      <span>REPEAT</span>
+    </div>
+    <div class="uni-hud uni-hud--bl" aria-hidden="true">
+      <span class="uni-hud__role">SOFTWARE<br>DEVELOPER</span>
+      <i class="uni-hud__rule"></i>
+    </div>
+    <div class="uni-hud uni-hud--tr" aria-hidden="true">
+      <span>BETTER</span>
+      <span>INTERFACES</span>
+      <span>A BRIGHTER</span>
+      <span>TOMORROW</span>
+    </div>
+    <div class="uni-hud uni-hud--br" aria-hidden="true">
+      <span>TOOLS</span>
+      <span>IDEAS</span>
+      <span>PEOPLE</span>
+      <span>IMPACT</span>
+    </div>
+
+    <ul class="sr-only">
+      <li>Python</li><li>SQL</li><li>React</li><li>Antigravity</li>
+      <li>Flutter</li><li>Vercel</li><li>C++</li><li>GitHub</li>
+      <li>HTML</li><li>Figma</li><li>Claude</li>
+    </ul>
+
+    <video id="uniFilm" muted playsinline loop preload="metadata"
+           poster="public/media/universe.jpg" aria-hidden="true">
+      <source src="public/media/universe.mp4" type="video/mp4">
+    </video>
+    <div class="universe__veil" id="uniVeil" aria-hidden="true"></div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section class="chrono" id="chrono" aria-labelledby="chronoTitle">
+    <div class="chrono__pin">
+      <canvas id="chronoStage" aria-hidden="true"></canvas>
+
+      <h2 class="chrono__title" id="chronoTitle">JOURNEY &amp; BIO</h2>
+      <p class="chrono__rail" aria-hidden="true">
+        <i></i>
+        <span>Foundation</span><span>Development</span><span>Hackathon</span>
+        <span>Internship</span><span>Vision</span>
+        <i></i>
+      </p>
+
+      <p class="chrono__hint" aria-hidden="true">
+        Move cursor<br>to explore<br>milestones<i></i>
+      </p>
+      <p class="chrono__note chrono__note--bl" aria-hidden="true">
+        Peri Inst.<br>of Technology<br>B.E. CSE (2023–27)<br>CGPA: 8.40
+      </p>
+      <p class="chrono__note chrono__note--br" aria-hidden="true">
+        Infologia Tech<br>Software Intern<br>July–Aug 2026<i></i>
+      </p>
+
+      <div class="chrono__deck" id="chronoDeck"></div>
+
+      <!-- the figure's own layer, stacked over the deck: he stands in front
+           of the timeline, looking at his journey -->
+      <canvas id="chronoFront" aria-hidden="true"></canvas>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section class="experience" id="experience" aria-labelledby="expTitle">
+    <!-- Atmospheric Scene Background & WebGL 3D Canvas Stage -->
+    <div class="exp__env" aria-hidden="true">
+      <canvas id="expCanvas" class="exp__canvas"></canvas>
+      <div class="exp__env-glow"></div>
+      <div class="exp__env-floor">
+        <div class="exp__floor-grid"></div>
+        <div class="exp__floor-horizon"></div>
+      </div>
+    </div>
+
+    <!-- Full-Screen Sliding Viewport & Track -->
+    <div class="exp__viewport" id="expViewport">
+      <div class="exp__fulltrack" id="expFullTrack">
+
+        <!-- ============================================================== -->
+        <!-- SLIDE 01: Infologia Technologies — Exact Two-Halves Composition   -->
+        <!-- ============================================================== -->
+        <div class="exp__slide exp__slide--primary is-active" id="expSlide1" data-slide="0">
+          <div class="exp__wrap">
+            <!-- Section Header -->
+            <header class="exp__header">
+              <p class="exp__over">Scene 03.5 &bull; Career &amp; Industry</p>
+              <h2 class="exp__title" id="expTitle">Work Experience</h2>
+              <p class="exp__sub">Observing corporate horizons &bull; Engineering scalable applications &bull; Production impact</p>
+            </header>
+
+            <!-- Main Stage: Exact Two-Halves Composition (Left: Panel Above Human | Right: Full Building) -->
+            <div class="exp__stage">
+
+              <!-- LEFT SIDE: Wide Landscape Information Panel Above Standing Human Character -->
+              <div class="exp__left-col">
+
+                <!-- ABOVE THE HUMAN: Wide Landscape-Oriented Rectangular Glass Panel -->
+                <div class="exp__panel-zone">
+                  <div class="exp__office-display" id="expInfoDisplay" role="region" aria-label="Software Developer Internship Details">
+                    <div class="exp__display-glass" id="expDisplayGlass">
+                      <div class="exp__display-sheen" aria-hidden="true"></div>
+                      <div class="exp__display-accent" aria-hidden="true"></div>
+                      <span class="exp__display-corner exp__display-corner--tl" aria-hidden="true"></span>
+                      <span class="exp__display-corner exp__display-corner--tr" aria-hidden="true"></span>
+                      <span class="exp__display-corner exp__display-corner--bl" aria-hidden="true"></span>
+                      <span class="exp__display-corner exp__display-corner--br" aria-hidden="true"></span>
+
+                      <!-- Landscape Top Bar: Role, Company, Duration & Tech Pills -->
+                      <div class="exp__display-top">
+                        <div class="exp__display-identity">
+                          <h3 class="exp__display-role">SOFTWARE DEVELOPER INTERN</h3>
+                          <h4 class="exp__display-company">Infologia Technologies</h4>
+                          <p class="exp__display-date">July 2026 – August 2026</p>
+                        </div>
+
+                        <div class="exp__display-right">
+                          <div class="exp__display-tech" aria-label="Technologies used">
+                            <span class="exp__tech-pill">Flutter</span>
+                            <span class="exp__tech-pill">Dart</span>
+                          </div>
+                          <button class="exp__expand-btn" id="expExpandBtn" type="button" aria-expanded="false" aria-controls="expDetailsDrawer">
+                            <span id="expExpandLabel">Details</span>
+                            <svg class="exp__expand-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- Project Title & Readable Summary -->
+                      <div class="exp__display-summary">
+                        <p class="exp__details-project">Smart Expense Tracker Application</p>
+                        <p class="exp__display-desc">
+                          Worked on a cross-platform Smart Expense Tracker application using Flutter and Dart. Contributed to responsive and reusable UI components, expense-management features, and application testing.
+                        </p>
+                      </div>
+
+                      <!-- Embedded Expandable Details Drawer -->
+                      <div class="exp__details-drawer" id="expDetailsDrawer" aria-hidden="true">
+                        <div class="exp__details-inner">
+                          <div class="exp__details-grid">
+                            <div>
+                              <span class="exp__details-heading">PROJECT FOCUS</span>
+                              <h5 class="exp__details-project">Smart Expense Tracker Application</h5>
+                              <ul class="exp__details-list">
+                                <li>Engineered cross-platform mobile UI with Flutter and Dart.</li>
+                                <li>Implemented state-managed expense tracking and categorization.</li>
+                                <li>Contributed to responsive reusable components and automated UI testing.</li>
+                              </ul>
+                            </div>
+                            <div class="exp__details-preview">
+                              <img src="public/experience/expense_app_preview.png" alt="Smart Expense Tracker Application UI Preview" loading="lazy">
+                            </div>
+                          </div>
+                          <div class="exp__details-footer">
+                            <div class="exp__details-tags">
+                              <span>Flutter</span>
+                              <span>Dart</span>
+                              <span>State Management</span>
+                              <span>Testing</span>
+                            </div>
+                            <button class="exp__collapse-btn" id="expCollapseBtn" type="button">Close</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <!-- STANDING HUMAN CHARACTER ON LEFT SIDE (With Clear Headroom Below Panel) -->
+                <div class="exp__char-col" id="expCharCol" aria-hidden="true">
+                  <div class="exp__char-shadow" id="expCharShadow"></div>
+                  <img class="exp__char-fig" id="expCharFig"
+                       src="public/experience/developer_facing_building.png"
+                       alt="Software Developer facing Infologia Technologies building"
+                       draggable="false">
+                  <div class="exp__char-badge" id="expCharBadge">
+                    <span class="exp__badge-dot"></span>
+                    <span class="exp__badge-text">S Diwakar &bull; Developer</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- RIGHT SIDE: Full-Size Company Building Sketch -->
+              <div class="exp__bld-zone" id="expBldZone" aria-hidden="true">
+                <div class="exp__bld-frame">
+                  <div class="exp__bld-grid-lines"></div>
+                  <img class="exp__bld-sketch" id="expBldSketch"
+                       src="public/experience/office_sketch_startup.png"
+                       alt="Infologia Technologies architectural headquarters sketch"
+                       draggable="false">
+                  <div class="exp__pencil-tracer" id="expPencilTracer" aria-hidden="true"></div>
+
+                  <!-- Facade Signboard with exact legal name: Infologia Technologies -->
+                  <div class="exp__signboard" id="expSignboard">
+                    <span class="exp__signboard-pip"></span>
+                    <span class="exp__signboard-text">Infologia Technologies</span>
+                  </div>
+
+                  <!-- Entrance Portal Target -->
+                  <div class="exp__bld-door-target" id="expDoorTarget" aria-hidden="true"></div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section class="gallery" id="gallery" aria-labelledby="galleryTitle">
+    <div class="gallery__pin">
+      <canvas id="galleryStage" aria-hidden="true"></canvas>
+
+      <!-- Clean Elegant Section Title Header -->
+      <header class="gallery__header" id="galleryHeader">
+        <div class="gallery__badge">
+          <span class="gallery__pip"></span>
+          <span>CURATED WORKS &bull; SCENE 04</span>
+        </div>
+        <h2 class="gallery__title" id="galleryTitle">PROJECTS</h2>
+        <p class="gallery__sub">Ideas to Impact &bull; Software Engineering &bull; Interactive Systems</p>
+      </header>
+
+      <!-- 3D Orbit World with Two Continuous Horizontal Scroll Tracks -->
+      <div class="gallery__world" id="galleryWorld">
+        <!-- Row 1: Top Stream (Right to Left) -->
+        <div class="proj-stream proj-stream--top" id="projStreamTop" aria-label="Projects Top Stream (Row 1)">
+          <div class="proj-track" id="projTrackTop"></div>
+        </div>
+
+        <!-- Row 2: Bottom Stream (Left to Right) -->
+        <div class="proj-stream proj-stream--bottom" id="projStreamBottom" aria-label="Projects Bottom Stream (Row 2)">
+          <div class="proj-track" id="projTrackBottom"></div>
+        </div>
+
+        <!-- Seated Developer Character at Workstation (Bottom Center) -->
+        <div class="gallery__person-wrap" id="galleryPersonWrap">
+          <img class="gallery__person" id="galleryPerson"
+               src="public/projects/person.png" alt="Developer at Workstation" draggable="false">
+        </div>
+      </div>
+
+      <!-- Ambient Cinematic HUD Labels -->
+      <p class="g-label g-label--ideas" aria-hidden="true">
+        <b>Ideas</b><br>Interfaces<br>Experiences<br>Real Impact
+      </p>
+      <p class="g-label g-label--scroll" aria-hidden="true">
+        Scroll<br>Explore<br>Interact
+      </p>
+      <p class="g-label g-label--real" aria-hidden="true">
+        Real<br>Projects<br>Real<br>Stories
+      </p>
+      <p class="g-label g-label--tomorrow" aria-hidden="true">
+        Engineering<br>A Brighter<br>Tomorrow
+      </p>
+      <span class="g-label g-label--num" id="galleryNum" aria-hidden="true">01</span>
+    </div>
+  </section>
+
+  <!-- Interactive Project Lightbox Modal (Compact Preview) -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projModalTitle" hidden>
+    <div class="project-modal__backdrop" id="projModalBackdrop" aria-hidden="true"></div>
+    <div class="project-modal__panel" id="projModalPanel">
+      <div class="project-modal__top">
+        <div class="project-modal__badge">
+          <span class="project-modal__pip"></span>
+          <span id="projModalCategory">Project Preview</span>
+        </div>
+        <div class="project-modal__actions">
+          <button class="project-modal__nav" id="projModalPrev" type="button" aria-label="Previous project">&larr;</button>
+          <span class="project-modal__counter" id="projModalCount">01 / 12</span>
+          <button class="project-modal__nav" id="projModalNext" type="button" aria-label="Next project">&rarr;</button>
+          <button class="project-modal__close" id="projModalClose" type="button" aria-label="Close project preview">&times;</button>
+        </div>
+      </div>
+      <div class="project-modal__body">
+        <div class="project-modal__frame">
+          <img id="projModalImg" src="public/projects/p01_evcdrp.png" alt="Project Preview" draggable="false">
+        </div>
+        <div class="project-modal__info">
+          <h3 class="project-modal__title" id="projModalTitle">EVRouteX</h3>
+          <p class="project-modal__desc" id="projModalDesc"></p>
+          <div class="project-modal__footer">
+            <button class="project-modal__btn project-modal__btn--back" id="projModalBackBtn" type="button">
+              &larr; Back to Gallery
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================================================================== -->
+  <section class="certs" id="certs" aria-labelledby="certsTitle">
+    <div class="certs__pin">
+      <canvas id="certsStage" aria-hidden="true"></canvas>
+
+      <!-- Central Walking Character (Transparent layer from user upload) -->
+      <div class="cert-person-wrap" id="certPersonWrap" aria-hidden="true">
+        <div class="cert-crown-box" id="certCrownBox">
+          <svg class="cert-crown" viewBox="0 0 100 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Red Neon Outer Glow Silhouette (Matching Reference Image) -->
+            <g stroke="#ff2a2b" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+              <!-- Base Circlet Arch -->
+              <path d="M16 45 Q50 49 84 45" stroke-width="2.6"/>
+              <!-- Crown 5-Point Royal Spire Silhouette -->
+              <path d="M16 45 L10 18 L22 29 L32 14 L42 27 L50 4 L58 27 L68 14 L78 29 L90 18 L84 45" stroke-width="2.4" fill="rgba(255, 42, 43, 0.10)"/>
+              <!-- Inner Chevron / Diamond Diadem Accents -->
+              <path d="M22 29 L32 38 L42 27 M58 27 L68 38 L78 29" stroke-width="1.6"/>
+            </g>
+            <!-- White Hand-Drawn Core Sketch Strokes -->
+            <g stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" opacity="0.96">
+              <!-- Base Circlet Inner Line -->
+              <path d="M18 44 Q50 48 82 44" stroke-width="1.4" stroke-dasharray="38 2 24 2"/>
+              <!-- 5-Point Peaks Core Outline -->
+              <path d="M16.5 44.5 L11 18.5 L22.5 29 L32 14.5 L42 26.5 L50 5 L58 26.5 L68 14.5 L77.5 29 L89 18.5 L83.5 44.5" stroke-width="1.5"/>
+              <!-- Royal Finial Jewels on Spire Tips -->
+              <circle cx="50" cy="4" r="2.0" fill="#ffffff" stroke="#ff2a2b" stroke-width="1"/>
+              <circle cx="32" cy="14" r="1.5" fill="#ffffff" stroke="#ff2a2b" stroke-width="0.8"/>
+              <circle cx="68" cy="14" r="1.5" fill="#ffffff" stroke="#ff2a2b" stroke-width="0.8"/>
+              <circle cx="10" cy="18" r="1.4" fill="#ffffff" stroke="#ff2a2b" stroke-width="0.8"/>
+              <circle cx="90" cy="18" r="1.4" fill="#ffffff" stroke="#ff2a2b" stroke-width="0.8"/>
+              <!-- Circlet Band Accents -->
+              <circle cx="28" cy="45.5" r="1.2" fill="#ff2a2b" stroke="#ffffff" stroke-width="0.6"/>
+              <circle cx="50" cy="47" r="1.5" fill="#ffffff" stroke="#ff2a2b" stroke-width="0.8"/>
+              <circle cx="72" cy="45.5" r="1.2" fill="#ff2a2b" stroke="#ffffff" stroke-width="0.6"/>
+            </g>
+          </svg>
+        </div>
+        <img class="cert-person" id="certPerson" src="public/certs/diwakar_portrait.png" alt="S Diwakar" draggable="false">
+      </div>
+
+      <!-- Dedicated Top-Left Title and Distinct Page Indicator -->
+      <header class="cert-hud cert-hud--title-wrap">
+        <div class="cert-hud__page-badge" id="certsPageIndicator">
+          <span class="cert-hud__page-pip"></span>
+          <span class="cert-hud__page-num">PAGE 05 &bull; CREDENTIALS</span>
+        </div>
+        <h2 class="cert-hud__title" id="certsTitle">Certifications</h2>
+        <p class="cert-hud__sub">Learning today for a better tomorrow.</p>
+      </header>
+
+      <div class="cert-hud cert-hud--bl" aria-hidden="true">
+        <p class="cert-hud__bl-text">Skills<br>Backed<br>By<br>Credibility</p>
+        <i class="cert-hud__dash"></i>
+      </div>
+
+      <div class="cert-hud cert-hud--tr" aria-hidden="true">
+        <p class="cert-hud__eyebrow">Same Passion<br>A Brighter Tomorrow</p>
+        <i class="cert-hud__dash"></i>
+      </div>
+
+      <div class="cert-hud cert-hud--br" aria-hidden="true">
+        <p class="cert-hud__bl-text">Learn<br>Build<br>Improve<br>Repeat</p>
+        <i class="cert-hud__dash"></i>
+      </div>
+
+      <!-- Living 3D Holographic Glass Deck -->
+      <div class="certs__deck" id="certsDeck"></div>
+    </div>
+  </section>
+
+  <!-- Interactive Certificate Lightbox Modal -->
+  <div class="certs-modal" id="certsModal" role="dialog" aria-modal="true" aria-labelledby="certsModalTitle" hidden>
+    <div class="certs-modal__backdrop" aria-hidden="true"></div>
+    <div class="certs-modal__panel">
+      <div class="certs-modal__top">
+        <div class="certs-modal__badge">
+          <i></i><span>Verified Credential</span>
+        </div>
+        <button class="certs-modal__close" id="certsModalClose" type="button" aria-label="Close certificate preview">&times;</button>
+      </div>
+      <div class="certs-modal__frame">
+        <img id="certsModalImg" src="public/certs/placeholder_01.png" alt="Certificate Preview" draggable="false">
+      </div>
+      <div class="certs-modal__info">
+        <div>
+          <h3 class="certs-modal__title" id="certsModalTitle">Professional Certification Placeholder</h3>
+          <p class="certs-modal__meta">
+            <span id="certsModalIssuer">Awarded by: Issuing Organization Placeholder</span>
+            <span id="certsModalDate">Issued: 2024</span>
+            <span id="certsModalId">ID: CRED-2024-001</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ====================================================================== -->
+<footer class="fin" id="fin" aria-label="Closing & Contact">
+  <div class="fin__pin">
+  <h2 class="sr-only">S Diwakar — Profile, Experience &amp; Contact</h2>
+
+  <div class="fin__stage1" id="finStage1">
+    <canvas id="finBack" aria-hidden="true"></canvas>
+    <canvas id="finMan" aria-hidden="true"></canvas>
+
+    <div class="f-cap f-cap--tl" aria-hidden="true">
+      <span class="f-cap__role">Education</span>
+      Bachelor of Engineering<br>
+      Computer Science &amp; Engineering<br>
+      Peri Institute of Technology<br>
+      2023–2027 &bull; CGPA: 8.40
+    </div>
+
+    <blockquote class="f-cap f-cap--quote">
+      <span class="f-cap__role">Profile</span>
+      <b class="f-cap__name">DIWAKAR S</b> &bull; Software Developer<br>
+      <small>Computer Science undergraduate experienced in building modern web, mobile, and interactive 3D digital experiences with Python, React &amp; Flutter.</small>
+    </blockquote>
+
+    <div class="f-cap f-cap--blw" aria-hidden="true">
+      <span class="f-cap__role">Experience</span>
+      Infologia Technologies<br>
+      Software Developer Intern<br>
+      July–August 2026<br>
+      Flutter &bull; Dart &bull; Expense Tracking UI
+    </div>
+
+    <div class="f-cap f-cap--tr" aria-hidden="true">
+      <span class="f-cap__role">Achievements</span>
+      Smart India Hackathon 2025 &bull; Finalist<br>
+      National Badminton &bull; Silver Medalist
+    </div>
+
+    <div class="f-cap f-cap--br" aria-hidden="true">
+      <span class="f-cap__role">Skills &amp; Platforms</span>
+      Python &bull; C++ &bull; SQL &bull; React &bull; Flutter<br>
+      MongoDB &bull; MySQL &bull; Git &bull; Vercel &bull; Figma
+    </div>
+  </div>
+
+  <div class="fin__dim" id="finDim" aria-hidden="true"></div>
+
+  <!-- the second frame of the finale: slides in from the left on scroll.
+       Dormant until its image exists (see boot6's candidate list). -->
+  <figure class="fin__frame2" id="finFrame2" aria-hidden="true" hidden>
+    <img id="finFrame2Img" alt="" draggable="false" decoding="async">
+  </figure>
+
+  <div class="fin__bar">
+    <div class="fin__primary">
+      <a href="mailto:sdiwakar2005s@gmail.com" aria-label="Email Diwakar S">
+        <span class="fin__tag">Email</span> sdiwakar2005s@gmail.com
+      </a>
+      <span class="fin__sep" aria-hidden="true">&bull;</span>
+      <a href="tel:+918608885338" aria-label="Call Diwakar S">
+        <span class="fin__tag">Tel</span> +91 8608885338
+      </a>
+      <span class="fin__sep" aria-hidden="true">&bull;</span>
+      <a href="public/resume.pdf" download="Diwakar_S_Resume.pdf" aria-label="Download Resume PDF">
+        <span class="fin__tag">CV</span> Download Resume (PDF)
+      </a>
+    </div>
+
+    <nav class="fin__soc" aria-label="Profiles">
+      <a href="https://www.linkedin.com/in/s-diwakar-164169291/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Diwakareyyyy" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+
+    <small class="fin__c">&copy; 2026 DIWAKAR S &mdash; All rights reserved</small>
+  </div>
+  </div>
+</footer>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
